@@ -18,7 +18,7 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     PIP_DEFAULT_TIMEOUT=100 \
     # Poetry env vars (https://python-poetry.org/docs/configuration/#using-environment-variables)
-    POETRY_VERSION=1.4.0 \ 
+    POETRY_VERSION=1.5.1 \ 
     POETRY_NO_INTERACTION=1
 
 RUN python3 -m pip install --upgrade pip
