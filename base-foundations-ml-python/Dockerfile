@@ -29,4 +29,4 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     jq \ 
     curl
 RUN ldconfig
-RUN apt-get clean && apt-get autoclean && apt-get autoremove
+# RUN apt-get clean && apt-get autoclean && apt-get autoremove

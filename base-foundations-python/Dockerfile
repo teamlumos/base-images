@@ -21,4 +21,4 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     gcc \
     jq \ 
     curl
-RUN apt-get clean && apt-get autoclean && apt-get autoremove
+# RUN apt-get clean && apt-get autoclean && apt-get autoremove
