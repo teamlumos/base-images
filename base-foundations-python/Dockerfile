@@ -2,9 +2,12 @@ FROM python:3.10.6-slim-buster as base-foundations-python
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     libpq-dev \ 
+    python3-dev \
+    build-essential \
     gcc \
     jq \ 
     curl
+
 RUN ldconfig
 RUN apt-get clean && apt-get autoclean && apt-get autoremove
 
