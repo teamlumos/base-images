@@ -27,6 +27,9 @@ ENV PYTHONUNBUFFERED=1 \
 
 RUN \
     python3 -m pip install --no-cache-dir pip==22.3.1 \
-    && pip install --no-cache-dir "poetry==$POETRY_VERSION" \
+    && pip install --no-cache-dir \
+    setuptools==68.1.2 \
+    virtualenv==20.23.1 \
+    "poetry==$POETRY_VERSION" \
     && poetry config virtualenvs.create false
 
