@@ -1,12 +1,12 @@
 FROM python:3.10.6-slim-buster as base-foundations-python
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    libpq-dev=11.20-0+deb10u1 \
-    python3-dev=3.7.3-1 \
-    build-essential=12.6 \
-    gcc=4:8.3.0-1 \
-    jq=1.5+dfsg-2+b1 \
-    curl=7.64.0-4+deb10u6 \
+    libpq-dev \
+    python3-dev \
+    build-essential \
+    gcc \
+    jq \
+    curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
