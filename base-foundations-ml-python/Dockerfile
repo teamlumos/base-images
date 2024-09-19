@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libgomp1=8.3.0-6 \
     gcc=4:8.3.0-1 \
     jq=1.5+dfsg-2+b1 \
-    curl=7.64.0-4+deb10u6 \
-    libpq-dev=11.20-0+deb10u1 \
+    curl=7.64.0-4+deb10u9 \
+    libpq-dev=11.22-0+deb10u2 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
