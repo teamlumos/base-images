@@ -7,6 +7,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     gcc \
     jq \
     curl \
+    # Add runtime dependencies for PyICU https://pypi.org/project/PyICU/
+    # ICU is used for transliteration support in Lumos Expression Language
+    pkg-config \
+    libicu-dev \
+    # End ICU dependencies
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -23,7 +28,7 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DEFAULT_TIMEOUT=100 \
     PIP_REQUESTS_TIMEOUT=180 \
     # Poetry env vars (https://python-poetry.org/docs/configuration/#using-environment-variables)
-    POETRY_VERSION=1.5.1 \ 
+    POETRY_VERSION=1.5.1 \
     POETRY_NO_INTERACTION=1
 
 RUN \
@@ -33,4 +38,3 @@ RUN \
     virtualenv==20.23.1 \
     "poetry==$POETRY_VERSION" \
     && poetry config virtualenvs.create false
-
