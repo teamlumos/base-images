@@ -10,6 +10,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     jq=1.5+dfsg-2+b1 \
     curl=7.64.0-4+deb10u9 \
     libpq-dev=11.22-0+deb10u2 \
+    # Add runtime dependencies for PyICU https://pypi.org/project/PyICU/
+    # ICU is used for transliteration support in Lumos Expression Language
+    pkg-config \
+    libicu-dev \
+    # End ICU dependencies
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
