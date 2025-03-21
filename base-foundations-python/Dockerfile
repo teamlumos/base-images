@@ -28,7 +28,7 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DEFAULT_TIMEOUT=100 \
     PIP_REQUESTS_TIMEOUT=180 \
     # Poetry env vars (https://python-poetry.org/docs/configuration/#using-environment-variables)
-    POETRY_VERSION=1.5.1 \
+    POETRY_VERSION=1.3.2 \
     POETRY_NO_INTERACTION=1
 
 RUN \
