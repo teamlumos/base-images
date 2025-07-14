@@ -1,4 +1,4 @@
-FROM python:3.10.6-slim-buster as base-foundations-python
+FROM python:3.10.6-slim-bullseye as base-foundations-python
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     libpq-dev \
